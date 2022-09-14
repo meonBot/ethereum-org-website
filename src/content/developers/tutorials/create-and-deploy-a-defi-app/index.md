@@ -146,7 +146,7 @@ The address used to deploy our contracts is the first one from the list of addre
 
 To verify that 1 million MyToken tokens have been sent to the deployer address, we can use the Truffle Console to interact with our deployed smart contract.
 
-> [Truffle Console is a a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
+> [Truffle Console is a basic interactive console connecting to any Ethereum client.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
 
 In order to interact with our smart contract, run the following command:
 
@@ -288,7 +288,7 @@ To execute this script, run the following cli command:
 truffle exec .\scripts\getMyTokenBalance.js
 ```
 
-We will get the expected result that is 0. If you get an error about the FarmToken not being deployed yet, the truffle network has not received the latest version of your contract code. Just close truffle, quickstart it again and make sure to run `truffle migrate`.
+We will get the expected result that is 0. If you get an error about the FarmToken not being deployed yet, the truffle network has not received the latest version of your contract code. Just close ganache, quickstart it again and make sure to run `truffle migrate`.
 
 Now, let's stake the MyToken to the smart contract. Since the function `deposit(uint256 _amount)` calls the function `safeTransferFrom` from the ERC20, the user must first approve the smart contract to transfer MyToken on the user's behalf. So on the script below, we will first approve this step then we will call the function:
 
